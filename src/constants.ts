@@ -46,6 +46,7 @@ export enum ChatModels {
   COPILOT_PLUS_FLASH = "copilot-plus-flash",
   GPT_4o = "gpt-4o",
   GPT_4o_mini = "gpt-4o-mini",
+  GPT_4_1 = "gpt-4.1",
   O1_mini = "o1-mini",
   O3_mini = "o3-mini",
   AZURE_OPENAI = "azure-openai",
@@ -111,6 +112,14 @@ export const BUILTIN_CHAT_MODELS: CustomModel[] = [
   },
   {
     name: ChatModels.GPT_4o_mini,
+    provider: ChatModelProviders.OPENAI,
+    enabled: true,
+    isBuiltIn: true,
+    core: true,
+    capabilities: [ModelCapability.VISION],
+  },
+  {
+    name: ChatModels.GPT_4_1,
     provider: ChatModelProviders.OPENAI,
     enabled: true,
     isBuiltIn: true,
